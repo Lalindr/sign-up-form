@@ -1,0 +1,154 @@
+:root{
+    --color: #2b3d51;
+    --font: Verdana, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: alfa-slab;
+    src: url(../fonts/alfa-slab/AlfaSlabOne-Regular.ttf);
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.img-div{
+    min-width: 500px;
+    background-image: url('../img/Image.jpg');
+    background-size: 100% 100%;
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.caption{
+    font-family: var(--font); 
+}
+.form-div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-family: var(--font);
+    background-color: #f9fafb;
+}
+.intro-text{
+    margin-top: 100px;
+}
+.logo{
+    margin-top: 215px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+}
+.odin-logo{
+    height: 200px;
+    width: auto;
+}
+.h-logo{
+    font-family: alfa-slab, Georgia, serif;
+    color: gray;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+}
+.caption{
+    color: white;
+    font-size: 0.85rem;
+    align-self: center;
+}
+.caption-a{
+    color: white;
+}
+.intro-text{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+.form-card{
+    box-shadow: 5px 13px 20px  #dddcde;
+    border-right: none;
+    border-left: none;
+    background-color: #fefeff;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 40px 80px 40px 80px;
+    font-family: var(--color);
+    font-size: .9rem;
+    border: none;
+}
+legend{
+    font-size: 1.9rem;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+fieldset>div{
+    display: flex;
+    gap: 150px;
+}
+fieldset>div>div{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #3d4550;
+}
+input{
+    border-radius: 5px;
+    border-color: #eceef0;
+    border-style: solid;
+}
+input:focus{
+    outline: none;
+    box-shadow: 3px 3px 3px #d9d8d9;
+    border: 2px #5274d6 solid;
+    border-radius: 5px;
+}
+input:invalid:focus{
+    outline: none;
+    border: 2px #c03534 solid;
+}
+input[type="password"]:invalid{
+    outline: none;
+    border: 2px #c03534 solid;
+}
+.error{
+    margin:0;
+    font-size: .7rem;
+    color:#c03534;
+}
+button[type="submit"]{
+    width: 150px;
+    height: 35px;
+    border-radius: 7px;
+    border: 1px var(--color) solid;
+    background-color: var(--color);
+    color: white;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 50px;
+    box-shadow: 3px 3px 3px #d9d8d9;
+
+}
+button[type="submit"]:hover{
+    background-color: #5274d6;
+    border-color: #5274d6;
+}
+.already{
+    font-size: 1.1rem;
+    margin-left: 50px;
+}
+.already>a{
+    color: var(--color);
+}
+@media only screen and (max-width: 800px){
+    body {
+        flex-direction: column;
+    }
+    .img-div{
+        flex: 2;
+    }
+}
